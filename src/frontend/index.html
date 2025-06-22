@@ -2,18 +2,60 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
   <title>GO-Chat</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <h1>GO-Chat</h1>
-  <div id="chat-box"></div>
-  <input type="text" id="msg-input" placeholder="Type a message..." />
-  <button onclick="sendMessage()">Send</button>
+<body onload="init()">
+
+  <!-- Header with GitHub logo and title -->
+  <header>
+    <a href="https://github.com/Daniel-Cocos" target="_blank" class="github-link">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+    </a>
+    <h1>GO-Chat</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <!-- Registration / Login Modal -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <h2 id="auth-title">Register</h2>
+      <input type="text" id="auth-username" placeholder="Username" />
+      <input type="password" id="auth-password" placeholder="Password" />
+      <button id="auth-action">Register</button>
+      <p id="auth-switch">Already have an account? <span id="toggle-auth">Login</span></p>
+      <p id="auth-error" class="error"></p>
+    </div>
+  </div>
+
+  <div id="chat-container" class="hidden">
+    <div class="container">
+      <div class="user-list">
+        <h3>Users</h3>
+        <button id="global-chat-btn">Global Chat</button>
+        <ul id="users"></ul>
+      </div>
+      <div class="chat-area">
+        <div id="chat-box"></div>
+        <div id="typingIndicator"></div>
+        <div class="input-area">
+          <input type="text" id="msg-input" placeholder="Type a message..." disabled />
+          <button id="send-btn" disabled>Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('logout-btn')?.addEventListener('click', () => {
+      localStorage.removeItem('gochat_username');
+      location.reload();
+    });
+  </script>
   <script src="/js/client.js"></script>
 </body>
 
 </html>
-

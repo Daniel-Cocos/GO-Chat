@@ -4,9 +4,11 @@ A simple, real-time web chat application built with Go for the backend and vanil
 
 ## Features
 
+✅ **Message encryption**
 ✅ WebSocket-based real-time messaging  
 ✅ Go backend with Gorilla WebSocket  
-✅ UI  
+✅ **Chat history** (locally stored and encrypted)
+✅ **Private/BroadCast messaging** (client-to-client)
 
 > ⚠️ Currently, all messages are **broadcasted to all clients**. Future updates will include **encrypted message history** and **private client-to-client messaging**.
 
@@ -62,9 +64,3 @@ GO-Chat
 - Connected clients can send messages using the UI.
 - Each message is broadcast to all other connected clients.
 - Messages are dynamically added to the chat box.
-
-## Planned Features
-
-- **Chat history** (locally stored and encrypted)
-- **Message encryption**
-- **Private messaging** (client-to-client)
