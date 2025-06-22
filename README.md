@@ -16,12 +16,21 @@ A simple, real-time web chat application built with Go for the backend and vanil
 
 ```
 GO-Chat
+├── data
+│   ├── dm
+│   │   └── User_User1.dm
+│   ├── public_chat.history
+│   └── users.json
 ├── go.mod
 ├── go.sum
+├── LICENSE
 ├── README.md
 └── src
     ├── backend
-    │   └── main.go
+    │   ├── decrypt.py
+    │   ├── encrypt.py
+    │   ├── main.go
+    │   └── password_validation.py
     └── frontend
         ├── css
         │   └── style.css
@@ -29,6 +38,7 @@ GO-Chat
         └── js
             └── client.js
 ```
+- The dm directory will contain as many ecrypted conversations between users as there are
 
 ## Getting Started
 
