@@ -4,11 +4,11 @@ A simple, real-time web chat application built with Go for the backend and vanil
 
 ## Features
 
-- **Message encryption**
+- Message encryption
 - WebSocket-based real-time messaging  
 - Go backend with Gorilla WebSocket  
-- **Chat history** (locally stored and encrypted)
-- **Private/BroadCast messaging** (client-to-client)
+- Chat history (locally stored and encrypted)
+- Private/BroadCast messaging (client-to-client)
 
 ## Project Structure
 
